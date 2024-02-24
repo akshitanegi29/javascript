@@ -1,0 +1,38 @@
+const name = "hitesh"
+const repoCount = 50
+
+// console.log(name + repoCount + " Value");
+
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); //string interpolation
+
+const gameName = new String('hitesh-hc-com')
+
+// console.log(gameName[0]);
+// console.log(gameName.__proto__);
+
+
+// console.log(gameName.length);
+// console.log(gameName.toUpperCase());
+console.log(gameName.charAt(2));
+console.log(gameName.indexOf('t'));
+
+const newString = gameName.substring(0, 4) //0 include, 4 exclude
+console.log(newString);
+
+const anotherString = gameName.slice(-8, 4) //-ve denote that start from end of the string. in -ve stat index: exclude ; -ve end index: include
+console.log(anotherString);
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+const newStringOne = "   hitesh    "
+console.log(newStringOne);
+console.log(newStringOne.trim());
+
+const url = "https://hitesh.com/hitesh%20choudhary"
+
+console.log(url.replace('%20', '-'))
+
+console.log(url.includes('sundar'))
+
+console.log(gameName.split('-'));
+
+//original values are not changed as string is primitive data type.
