@@ -54,27 +54,36 @@ users[1].email
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
 
+//DESTRUCTORING IN OBJECTS
 const course = {
     coursename: "js in hindi",
     price: "999",
     courseInstructor: "hitesh"
 }
 
-// course.courseInstructor
+const {courseInstructor} = course
 
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course //assigning diff name to key
 
-// console.log(courseInstructor);
+console.log(courseInstructor);
 console.log(instructor);
 
-// {
-//     "name": "hitesh",
-//     "coursename": "js in hindi",
-//     "price": "free"
-// }
+
+
+/*JSON 
+API Response can be in json format or in array of objects
+1. json
+{
+    "name": "hitesh",
+    "coursename": "js in hindi",
+    "price": "free"
+}
+
+2. array of objs
 
 [
     {},
     {},
     {}
 ]
+*/
