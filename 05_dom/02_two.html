@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    div.style.color = 'red';
+    div.setAttribute('id', Math.round(Math.random()*10 + 1))
+    //div.innerText = 'hello';
+    let text = document.createTextNode('hello')
+    console.log(div);
+    div.appendChild(text);
+    document.body.appendChild(div)
+</script>
+</html>
