@@ -1,7 +1,2 @@
 # PROJECTS:
-### Project link: [CLICK HERE](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
-
-## project 1
-```
-
-```
+### Projects link: [CLICK HERE](https://stackblitz.com/edit/dom-project-chaiaurcode-wcuzs1?file=index.html)
