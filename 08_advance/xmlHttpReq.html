@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+
+    XMLHttpRequest is a built-in browser object that allows to make HTTP requests in JavaScript.
+
+Despite having the word “XML” in its name, it can operate on any data, not only in XML format. We can upload/download files, track progress and much more.
+
+Right now, there’s another, more modern method fetch, that somewhat deprecates XMLHttpRequest.
+
+In modern web-development XMLHttpRequest is used for three reasons:
+
+Historical reasons: we need to support existing scripts with XMLHttpRequest.
+We need to support old browsers, and don’t want polyfills (e.g. to keep scripts tiny).
+We need something that fetch can’t do yet, e.g. to track upload progress.
+
+
+    0	UNSENT	-> Client has been created. open() not called yet.
+    1	OPENED	-> open() has been called.
+    2	HEADERS_RECEIVED	-> send() has been called, and headers and status are available.
+    3	LOADING	-> Downloading; responseText holds partial data.
+    4	DONE	-> The operation is complete.
+
+<!-- UNSENT = 0; // initial state
+OPENED = 1; // open called
+HEADERS_RECEIVED = 2; // response headers received
+LOADING = 3; // response is loading (a data packet is received)
+DONE = 4; // request complete -->
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/akshitanegi29'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            //typeof this.responseText is string. hence it is converted to JSON
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.bio);
+        }
+    }
+    xhr.send();
+</script>
+</html>
