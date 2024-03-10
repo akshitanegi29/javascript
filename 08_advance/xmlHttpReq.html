@@ -7,25 +7,30 @@
 </head>
 <body style="background-color: #212121; color:aliceblue">
 
-    XMLHttpRequest is a built-in browser object that allows to make HTTP requests in JavaScript.
+<p>XMLHttpRequest is a built-in browser object that allows to make HTTP requests in JavaScript.
 
 Despite having the word “XML” in its name, it can operate on any data, not only in XML format. We can upload/download files, track progress and much more.
 
-Right now, there’s another, more modern method fetch, that somewhat deprecates XMLHttpRequest.
+Right now, there’s another, more modern method fetch, that somewhat deprecates XMLHttpRequest. </p>
 
-In modern web-development XMLHttpRequest is used for three reasons:
+<ul>In modern web-development XMLHttpRequest is used for three reasons:</ul>
 
-Historical reasons: we need to support existing scripts with XMLHttpRequest.
-We need to support old browsers, and don’t want polyfills (e.g. to keep scripts tiny).
-We need something that fetch can’t do yet, e.g. to track upload progress.
+<li>Historical reasons: we need to support existing scripts with XMLHttpRequest.</li>
+<li>We need to support old browsers, and don’t want polyfills (e.g. to keep scripts tiny).</li>
+<li>We need something that fetch can’t do yet, e.g. to track upload progress.</li>
 
 
-    0	UNSENT	-> Client has been created. open() not called yet.
-    1	OPENED	-> open() has been called.
-    2	HEADERS_RECEIVED	-> send() has been called, and headers and status are available.
-    3	LOADING	-> Downloading; responseText holds partial data.
-    4	DONE	-> The operation is complete.
-
+<div>
+    <p></p>
+    <ul>............................................................................................................................................................................................................................</ul>
+<li>0	UNSENT	-> Client has been created. open() not called yet.</li>
+<li>1	OPENED	-> open() has been called.</li>
+<li>2	HEADERS_RECEIVED	-> send() has been called, and headers and status are available.</li>
+<li>3	LOADING	-> Downloading; responseText holds partial data.
+</li>
+<li>4	DONE	-> The operation is complete.</li>
+    
+</div>
 <!-- UNSENT = 0; // initial state
 OPENED = 1; // open called
 HEADERS_RECEIVED = 2; // response headers received
