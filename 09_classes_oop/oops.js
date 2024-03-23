@@ -48,7 +48,7 @@ const uSer = {
 
 //console.log(user.username)
 //console.log(user.getUserDetails());
-// console.log(this);
+// console.log(this); //here {} in node env but in browser this refers to windows obj
 
 
 function User(username, loginCount, isLoggedIn){
