@@ -23,7 +23,7 @@ createUser.prototype.printMe = function(){
 
 const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
-
+console.log('createUser prototype', createUser.prototype)
 chai.printMe()
 
 
@@ -31,7 +31,7 @@ chai.printMe()
 
 Here's what happens behind the scenes when the new keyword is used:
 
-A new object is created: The new keyword initiates the creation of a new JavaScript object.
+A new object is created: The new keyword initiates the creation of a new JavaScript object. {}
 
 A prototype is linked: The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
 
