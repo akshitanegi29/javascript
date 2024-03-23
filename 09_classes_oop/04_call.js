@@ -18,9 +18,13 @@ let name1 = {
     firstname: "Akshita",
     lastName: "negi"
 }
-let print = function(hometown){
-    console.log(this.firstname+" "+this.lastName+" lives in "+hometown)
+let print = function(hometown, state){
+    console.log(this.firstname+" "+this.lastName+" lives in "+hometown + ", "+state)
 }
 
-print.call(name1, "UK") //first arg is the reference of obj you want to point to
+print.call(name1, "Pauri", "UK") //first arg is the reference of obj you want to point to
 //function borrowing
+
+print.apply(name1,["Pauri", "UK"]) //works exactly same as call but second arg is array list of params
+
+
